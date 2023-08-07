@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+
+
+<!-- BS5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<!-- BS5 -->
+<!-- Own css -->
+<link href="styles.css" rel="stylesheet">
+<!-- Own Css -->
+
+
+
+
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="wrapper flex-container">
+    <div class="Flexitem item1 background-img">
+    </div>
+    <div class="flexitem item2">
+      <h1 class="ToDo">TO DO</h1>  
+      <button class="toggler changeMode"></button>
+      <div class="inputDiv">
+        <input type="text" class="todoInput" placeholder="create a new todo...">
+        <button class="todoAdder"></button>
+      </div>
+      <div class="tabcontent" id="All">
+        <ul class="theList"></ul>
+      </div>
+
+      <nav>
+        <ul class="navUl">
+          <span id="itemCounter">0 items left</span>
+          <a class="tabLinks active" data-target="Active" href="#">Active</a>
+          <a class="tabLinks" data-target="All"  href="#">All</a>
+          <a class="tabLinks" data-target="Completed" href="#">Completed</a>
+          <button class="clearAll">Clear all items</button>
+        
+        </ul>
+      </nav>
+
+      <div class="tabcontent" id="Active" style="display:none;">
+        <ul class="activeList"></ul>
+      </div>
+      
+      <div class="tabcontent" id="Completed" style="display: none;">
+        <ul class="completedList"></ul>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  
+  <h1>Todo</h1>
+
+  <!-- Add dynamic number --> items left
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>-->
+
+
+
+<!-- BS5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<!-- BS5 JS -->
+
+<!--JQUERY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+<!--JQ UI LIBRARY-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+<!--JQ UI LIBRARY FOR DRAGGING FUNCTIONALITY-->
+<!-- Own JS -->
+<script src="index.js"></script>
+<!-- Own JS -->
+</body>
+</html>

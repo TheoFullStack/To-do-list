@@ -1,0 +1,350 @@
+:root{
+    --primary-font: 'Josefin Sans', sans-serif; 
+    --paragraph-weight:400;
+    --header-weight:700;
+    --font-size: 18px;
+    --color-light: black;
+    --color-dark:hsl(0, 0%, 98%)
+    --light-background: white;
+    --light-text: black;
+}
+
+.dark-mode{
+   background-color:black;
+    color: white;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    font-size: var(--font-size);
+    font-family: var(--primary-font);
+    font-weight: var(--paragraph-weight);
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.completedList li{
+    color: var(--color-light);
+    font-family: var(--primary-font);
+    font-size: var(--font-size);
+    width: 100%;
+    line-height: 3; /* Adjusted line-height */
+    display: flex; /* Added flex display */
+    align-items: center; /* Center alignment */
+    position:relative;
+}
+.theList li{
+    color: var(--color-light);
+    font-family: var(--primary-font);
+    font-size: var(--font-size);
+    width: 100%;
+    line-height: 3; /* Adjusted line-height */
+    display: flex; /* Added flex display */
+    align-items: center; /* Center alignment */
+    position:relative;
+    transition: text-decoration 0.3s ease;
+}
+
+.theList li::before{
+    content: '';
+    display: inline-block;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 50%;
+    /**background-color: rgba(49, 58, 233, 1);**/
+   /** background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(49,58,233,1) 100%);**/
+    border:solid;
+    transition: background-color 0.3s ease;
+   /** background-image: url("images/icon-check.svg");**/
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.theList li.strikethrough::before{
+    background-color: black;
+
+}
+
+.theList li.strikethrough{
+    text-decoration: line-through;
+}
+
+.completedList li::before{
+    content: '';
+    display: inline-block;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 50%;
+    background-color: rgba(49, 58, 233, 1);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(49,58,233,1) 100%);
+    border:solid;
+    transition: background-color 0.3s ease;
+    background-image: url("images/icon-check.svg");
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.completedList li.strikethrough::before{
+    background-color: black;
+
+}
+
+.completedList li.strikethrough{
+    text-decoration: line-through;
+}
+
+.activeList li.strikethrough::before{
+    background-color: black;
+
+}
+
+.activeList li.strikethrough{
+    text-decoration: line-through;
+}
+
+
+.activeList li{
+    color: var(--color-light);
+    font-family: var(--primary-font);
+    font-size: var(--font-size);
+    width: 100%;
+    line-height: 3; /* Adjusted line-height */
+    display: flex; /* Added flex display */
+    align-items: center; /* Center alignment */
+    position:relative;
+    transition: text-decoration 0.3s ease;
+}
+
+.activeList li::before{
+    content: '';
+    display: inline-block;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 50%;
+    /**background-color: rgba(49, 58, 233, 1);**/
+    /**background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(49,58,233,1) 100%);**/
+    border:solid;
+    transition: background-color 0.3s ease;
+    background-image: transparent;
+    background-position: center center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+h1{
+    font-family: var(--primary-font);
+    color:white;
+    font-weight: var(--header-weight);
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height:1000px;
+    width:100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.toggler{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    position:absolute;
+    display: inline-block;
+    right: 0px;
+    top: 0px;
+    background-image: url("images/icon-moon.svg");
+    background-color: transparent;
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    
+}
+
+
+.background-img{
+    height:35%;
+    width:100%;
+    background-image: url("images/bg-desktop-light.jpg");
+    background-clip: border-box;
+    background-repeat: repeat;
+    position: absolute;
+    background-size: cover;
+    top:0px;
+}
+
+
+.item2{
+    height: 800px;
+    width: 600px;
+    z-index: 1;
+    position:relative;
+    background-color: transparent;
+    border: black solid;
+}
+
+
+.inputDiv{
+    position:relative;
+    height: auto;
+}
+.inputDiv input{
+    width:100%;
+    margin-top: 5%;
+    height: 80px;
+    border-radius: 5px;
+    padding-left: 100px;
+    font-family: var(--primary-font);
+}
+
+.inputDiv .todoAdder{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top:45%;
+    background-color: transparent;
+    border-color: hsl(0, 2%, 29%);
+    border-style: solid;
+}
+
+.tabcontent{
+    margin-top: 20px;
+    background-color:white;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* work on the margin-left, it is not working properly */
+.delete-button{
+    position: absolute;
+    font-size: 35px;
+    right:5px;
+    background-image: url("images/icon-cross.svg");
+    background-color: transparent;
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    height:50px;
+    width:50px;
+    border-radius: 30%;
+    
+
+}
+
+.completedList li{
+    color: var(--color-light);
+    font-family: var(--primary-font);
+    font-size: var(--font-size);
+    width: 100%;
+    line-height: 3; /* Adjusted line-height */
+    display: flex; /* Added flex display */
+    align-items: center; /* Center alignment */
+    position:relative;
+}
+
+
+.delete-button-completed{
+    position: absolute;
+    font-size: 35px;
+    right:5px;
+    background-image: url("images/icon-cross.svg");
+    background-color: transparent;
+    background-position: center;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    height:50px;
+    width:50px;
+    border-radius: 30%;
+    
+}
+
+.navUl{
+    position: absolute;
+    display: flex;
+    bottom:0px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:80px;
+    width: 100%;
+    margin-bottom:0px;
+}
+.navUl a{
+    display:inline-flex;
+    margin-right:50px;
+    font-family: var(--primary-font);
+    text-decoration: none;
+    color:hsl(0, 3%, 49%);
+}
+
+.navUl .active{
+    color:rgb(66, 66, 255);
+}
+
+#itemCounter{
+    position: absolute;
+    left:5px;
+    align-self: center;
+    font-family: var(--primary-font);
+    color:hsl(0, 3%, 49%);
+}
+
+.clearAll{
+    position: absolute;
+    border:none;
+    background-color: transparent;
+    font-family: var(--primary-font);
+    right:10px;
+    color:hsl(0, 3%, 49%);
+}
+
+.dark-mode-li{
+    background-color: hsl(235, 24%, 19%);
+    color:hsl(234, 11%, 52%)!important;
+}
+
+.dark-mode-input{
+    background-color: hsl(235, 24%, 19%);
+    color:hsl(234, 11%, 52%)!important;
+    border:none;
+}
+
+.dark-mode-navUl{
+    background-color: hsl(235, 24%, 19%);
+}
